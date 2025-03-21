@@ -123,7 +123,7 @@ export default function Contact() {
                                     type="tel"
                                     name="tel"
                                     id="tel"
-                                    placeholder="Telephone Number"
+                                    placeholder="Contact Number"
                                     className="w-100 mt-2 py-3 px-3 rounded-lg bg-white border border-gray-400 text-gray-800 font-semibold focus:border-orange-500 focus:outline-none"
                                 />
                             </div>
