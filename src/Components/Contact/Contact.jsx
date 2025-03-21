@@ -128,7 +128,7 @@ export default function Contact() {
                                 />
                             </div>
 
-                            <form action="/about">
+                            <form action="https://stay-near.vercel.app/about">
                             <button
                                 type="submit"
                                 className="md:w-32 bg-orange-700 text-white font-bold py-3 px-6 rounded-lg mt-3 transition ease-in-out duration-300 hover:bg-orange-600"
