@@ -9,7 +9,6 @@ import Home from './Components/Home/Home.jsx'
 import About from './Components/About/About.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import { Route } from 'react-router-dom'
-import User from './Components/User/user.jsx'
 
 
 const router = createBrowserRouter(
