@@ -128,13 +128,14 @@ export default function Contact() {
                                 />
                             </div>
 
-                            
+                            <form action="/submit">
                             <button
                                 type="submit"
                                 className="md:w-32 bg-orange-700 text-white font-bold py-3 px-6 rounded-lg mt-3 transition ease-in-out duration-300 hover:bg-orange-600"
                             >
                                 Submit
                             </button>
+                            </form>
 
                         </form>
                     </div>
