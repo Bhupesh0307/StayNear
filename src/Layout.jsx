@@ -4,11 +4,13 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 function Layout() {
     return(
-        <>
+        <div className="layout-container">
         <Header />
-        <Outlet />
+        <main>
+            <Outlet />
+        </main>
         <Footer />
-        </>
+        </div>
     )
 }
 
