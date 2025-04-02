@@ -88,7 +88,7 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        <form action="https://stay-near.vercel.app/about" method="POST" className="p-6 flex flex-col justify-center">
+                        <form action="https://stay-near.vercel.app/about" className="p-6 flex flex-col justify-center">
                             <div className="flex flex-col">
                                 <label for="name" className="hidden">
                                     Full Name
