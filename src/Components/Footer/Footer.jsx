@@ -169,7 +169,7 @@ export default function Footer() {
                     {/* Logo Section */}
                     <div className="flex justify-center md:justify-start">
                         <Link to="/" className="flex items-center">
-                            <img src={StayNearLogo} className="w-28 md:w-36 rounded-lg" alt="StayNear Logo" />
+                        <img src={StayNearLogo} className="mr-3 w-75 rounded-lg" alt="StayNear Logo" />
                         </Link>
                     </div>
 

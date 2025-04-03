@@ -103,11 +103,7 @@ export default function Header() {
                     
                     {/* Logo */}
                     <Link to="/" className="flex items-center">
-                        <img 
-                            src={StayNearLogo} 
-                            className="w-12 sm:w-16 md:w-20 rounded-lg" 
-                            alt="StayNear Logo" 
-                        />
+                        <img src={StayNearLogo} className="mr-3 w-50 rounded-lg" alt="StayNear Logo" />
                     </Link>
 
                     {/* Mobile Menu Button */}
