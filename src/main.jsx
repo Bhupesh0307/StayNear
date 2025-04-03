@@ -9,6 +9,7 @@ import Home from './Components/Home/Home.jsx'
 import About from './Components/About/About.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import GuestHouses from './Components/Guest House/guest-house.jsx'
+import Upload from './Components/Upload/Upload.jsx'
 import { Route } from 'react-router-dom'
 
 
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
       <Route path='guest-house' element={<GuestHouses />} />
+      <Route path='/upload-guest-house' element={<Upload />} />
     </Route>
   )
 )
