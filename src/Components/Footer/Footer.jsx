@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import StayNearLogo from "../../assets/Yellow and Black Modern Media Logo.png";
 
 export default function Footer() {
     return (
@@ -8,11 +9,7 @@ export default function Footer() {
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <Link to="/" className="flex items-center">
-                            <img
-                                src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
-                                className="mr-3 h-16"
-                                alt="Logo"
-                            />
+                            <img src={StayNearLogo} className="mr-3 w-75 rounded-lg" alt="StayNear Logo" />
                         </Link>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

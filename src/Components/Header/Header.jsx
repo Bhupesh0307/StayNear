@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link, NavLink} from 'react-router-dom'
+import StayNearLogo from "../../assets/Yellow and Black Modern Media Logo.png";
 
 export default function Header() {
     return (
@@ -7,11 +8,8 @@ export default function Header() {
             <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     <Link to="/" className="flex items-center">
-                        <img
-                            src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
-                            className="mr-3 h-12"
-                            alt="Logo"
-                        />
+                    <img src={StayNearLogo} className="mr-3 w-65 rounded-lg" alt="StayNear Logo" />
+
                     </Link>
                     <div className="flex items-center lg:order-2">
                         <Link

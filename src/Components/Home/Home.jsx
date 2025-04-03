@@ -1,15 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 export const websiteName = "StayNear"
+import StayNearLogo from "../../assets/Yellow and Black Modern Media Logo.png";
 export default function Home() {
     return (
         <div className="mx-auto w-full max-w-7xl">
           
           <div className="relative z-10 max-w-screen-xl px-4 pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8 flex justify-center">
-  <div className="max-w-xl space-y-8 text-center">
-    <h2 className="text-4xl font-bold sm:text-5xl">{websiteName}</h2>
-  </div>
-</div>
+            <div className="max-w-xl space-y-8 text-center">
+                <h2 className="text-4xl font-bold sm:text-5xl">{websiteName}</h2>
+            </div>
+            </div>
 
                 <div className="relative w-full flex justify-center sm:my-20 sm:pt-1 pt-12">
                     <img 
