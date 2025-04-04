@@ -78,7 +78,7 @@ export default function Contact() {
                     />
                 </svg>
                 <div className="ml-4 text-md tracking-wide font-semibold">
-                    {websiteName}123@gmail.com`
+                    {websiteName}123@gmail.com
                 </div>
                 </div>
             </div>
