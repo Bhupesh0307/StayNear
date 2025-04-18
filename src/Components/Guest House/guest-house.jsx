@@ -4,6 +4,9 @@ import { FiWifi, FiHome, FiDollarSign, FiMapPin, FiPhone, FiUser, FiUsers, FiHea
 import { BiDumbbell, BiCctv } from "react-icons/bi";
 import { TbAirConditioning, TbParking, TbToolsKitchen } from "react-icons/tb";
 import { IoMdRestaurant } from "react-icons/io";
+import { FaSchool } from "react-icons/fa";
+import guestHouses from "../../data/GuestHouses";
+import colleges from "../../data/Colleges";
 
 const GuestHouses = () => {
   const [selectedCollege, setSelectedCollege] = useState(null);
@@ -27,329 +30,6 @@ const GuestHouses = () => {
     kitchen: false,
     restaurant: false,
   });
-
-  // Enhanced guest house data with amenities
-  const guestHouses = [
-    {
-      id: 1,
-      name: "Sunrise Villa",
-      owner: "Mr. Rajesh Sharma",
-      location: "Sector 5, Jaipur",
-      capacity: "10 rooms, 20 guests",
-      image: "https://example.com/sunrise-villa.jpg",
-      college: "LNMIIT",
-      details: "A luxurious villa with modern amenities and a serene environment.",
-      number: "6237946983",
-      price: 1500,
-      category: "Paid Guest House",
-      gender: "Male",
-      rating: 4.5,
-      reviewCount: 32,
-      amenities: {
-        wifi: true,
-        ac: true,
-        gym: false,
-        cctv: true,
-        parking: true,
-        kitchen: true,
-        restaurant: false,
-      },
-      distance: "1.2",
-    },
-    {
-      id: 2,
-      name: "Greenwood Residency",
-      owner: "Ms. Priya Mehta",
-      location: "Bani Park, Jaipur",
-      capacity: "15 rooms, 30 guests",
-      image: "https://example.com/greenwood-residency.jpg",
-      college: "JECRC",
-      details: "Comfortable and budget-friendly residency near the city center.",
-      number: "8812347613",
-      price: 1000,
-      category: "Paid Guest House",
-      gender: "Female",
-      rating: 4.2,
-      reviewCount: 27,
-      amenities: {
-        wifi: true,
-        ac: true,
-        gym: false,
-        cctv: true,
-        parking: false,
-        kitchen: true,
-        restaurant: false,
-      },
-      distance: "1.5",
-    },
-    {
-      id: 3,
-      name: "Lakeview Retreat",
-      owner: "Mr. Anil Kapoor",
-      location: "Amer Road, Jaipur",
-      capacity: "8 rooms, 16 guests",
-      image: "https://example.com/lakeview-retreat.jpg",
-      college: "MNIT",
-      details: "Scenic guest house with a mesmerizing lake view and cozy rooms.",
-      number: "9678683689",
-      price: 1200,
-      category: "Hotel",
-      gender: "Any",
-      rating: 4.7,
-      reviewCount: 42,
-      amenities: {
-        wifi: true,
-        ac: true,
-        gym: true,
-        cctv: true,
-        parking: true,
-        kitchen: false,
-        restaurant: true,
-      },
-      distance: "2.3",
-    },
-    {
-      id: 4,
-      name: "Heritage Inn",
-      owner: "Mrs. Sunita Verma",
-      location: "C-Scheme, Jaipur",
-      capacity: "12 rooms, 24 guests",
-      image: "https://example.com/heritage-inn.jpg",
-      college: "LNMIIT",
-      details: "A historical guest house with traditional decor and premium services.",
-      number: "9231784698",
-      price: 2000,
-      category: "Hotel",
-      gender: "Female",
-      rating: 4.8,
-      reviewCount: 56,
-      amenities: {
-        wifi: true,
-        ac: true,
-        gym: true,
-        cctv: true,
-        parking: true,
-        kitchen: false,
-        restaurant: true,
-      },
-      distance: "3.1",
-    },
-    {
-      id: 5,
-      name: "Budget Stay",
-      owner: "Mr. Ravi Saini",
-      location: "Malviya Nagar, Jaipur",
-      capacity: "6 rooms, 12 guests",
-      image: "https://example.com/budget-stay.jpg",
-      college: "MNIT",
-      details: "Affordable accommodation with basic amenities.",
-      number: "7003445234",
-      price: 800,
-      category: "Paid Guest House",
-      gender: "Male",
-      rating: 3.9,
-      reviewCount: 18,
-      amenities: {
-        wifi: true,
-        ac: false,
-        gym: false,
-        cctv: true,
-        parking: false,
-        kitchen: true,
-        restaurant: false,
-      },
-      distance: "1.0",
-    },
-    {
-      id: 6,
-      name: "Elite Comfort Hotel",
-      owner: "Mrs. Naina Arora",
-      location: "Vaishali Nagar, Jaipur",
-      capacity: "20 rooms, 40 guests",
-      image: "https://example.com/elite-comfort-hotel.jpg",
-      college: "JECRC",
-      details: "Top-rated hotel with executive service and facilities.",
-      number: "9982378123",
-      price: 2500,
-      category: "Hotel",
-      gender: "Any",
-      rating: 4.9,
-      reviewCount: 78,
-      amenities: {
-        wifi: true,
-        ac: true,
-        gym: true,
-        cctv: true,
-        parking: true,
-        kitchen: false,
-        restaurant: true,
-      },
-      distance: "4.2",
-    },
-    {
-      id: 7,
-      name: "Royal Heritage Haveli",
-      owner: "Mr. Vikram Rathore",
-      location: "Khatipura, Jaipur",
-      capacity: "15 rooms, 30 guests",
-      image: "https://example.com/royal-heritage-haveli.jpg",
-      college: "LNMIIT",
-      details: "Experience royal heritage with modern comforts.",
-      number: "9829012345",
-      price: 3000,
-      category: "Hotel",
-      gender: "Any",
-      rating: 4.6,
-      reviewCount: 62,
-      amenities: {
-        wifi: true,
-        ac: true,
-        gym: true,
-        cctv: true,
-        parking: true,
-        kitchen: false,
-        restaurant: true,
-      },
-      distance: "5.7",
-    },
-    {
-      id: 8,
-      name: "The Grand Palace",
-      owner: "Ms. Anjali Desai",
-      location: "MI Road, Jaipur",
-      capacity: "25 rooms, 50 guests",
-      image: "https://example.com/the-grand-palace.jpg",
-      college: "JECRC",
-      details: "A grand hotel offering luxurious stays in the heart of the city.",
-      number: "9812345678",
-      price: 3500,
-      category: "Hotel",
-      gender: "Any",
-      rating: 4.9,
-      reviewCount: 92,
-      amenities: {
-        wifi: true,
-        ac: true,
-        gym: true,
-        cctv: true,
-        parking: true,
-        kitchen: false,
-        restaurant: true,
-      },
-      distance: "6.3",
-    },
-    {
-      id: 9,
-      name: "City Center Inn",
-      owner: "Mr. Suresh Gupta",
-      location: "Sindhi Camp, Jaipur",
-      capacity: "10 rooms, 20 guests",
-      image: "https://example.com/city-center-inn.jpg",
-      college: "MNIT",
-      details: "Conveniently located inn with easy access to transportation hubs.",
-      number: "9876543210",
-      price: 900,
-      category: "Paid Guest House",
-      gender: "Any",
-      rating: 4.0,
-      reviewCount: 25,
-      amenities: {
-        wifi: true,
-        ac: false,
-        gym: false,
-        cctv: true,
-        parking: true,
-        kitchen: true,
-        restaurant: false,
-      },
-      distance: "2.8",
-    },
-    {
-      id: 10,
-      name: "Tranquil Gardens",
-      owner: "Mrs. Kavita Joshi",
-      location: "Civil Lines, Jaipur",
-      capacity: "12 rooms, 24 guests",
-      image: "https://example.com/tranquil-gardens.jpg",
-      college: "LNMIIT",
-      details: "Peaceful guest house surrounded by lush gardens.",
-      number: "9765432109",
-      price: 1800,
-      category: "Paid Guest House",
-      gender: "Female",
-      rating: 4.4,
-      reviewCount: 36,
-      amenities: {
-        wifi: true,
-        ac: true,
-        gym: false,
-        cctv: true,
-        parking: true,
-        kitchen: true,
-        restaurant: false,
-      },
-      distance: "3.5",
-    },
-    {
-      id: 11,
-      name: "Amber Palace Hotel",
-      owner: "Mr. Rohan Mehta",
-      location: "Amer, Jaipur",
-      capacity: "18 rooms, 36 guests",
-      image: "https://example.com/amber-palace-hotel.jpg",
-      college: "JECRC",
-      details: "Luxury hotel near the historic Amber Fort.",
-      number: "9654321098",
-      price: 2800,
-      category: "Hotel",
-      gender: "Any",
-      rating: 4.7,
-      reviewCount: 64,
-      amenities: {
-        wifi: true,
-        ac: true,
-        gym: true,
-        cctv: true,
-        parking: true,
-        kitchen: false,
-        restaurant: true,
-      },
-      distance: "7.2",
-    },
-    {
-      id: 12,
-      name: "Pink City Hostel",
-      owner: "Ms. Sneha Kapoor",
-      location: "Raja Park, Jaipur",
-      capacity: "8 rooms, 16 guests",
-      image: "https://example.com/pink-city-hostel.jpg",
-      college: "MNIT",
-      details: "A vibrant hostel for backpackers and solo travelers.",
-      number: "9543210987",
-      price: 700,
-      category: "Paid Guest House",
-      gender: "Female",
-      rating: 4.1,
-      reviewCount: 22,
-      amenities: {
-        wifi: true,
-        ac: false,
-        gym: false,
-        cctv: true,
-        parking: false,
-        kitchen: true,
-        restaurant: false,
-      },
-      distance: "2.1",
-    }
-  ];
-
-  const colleges = [
-    { value: "LNMIIT", label: "LNMIIT" },
-    { value: "JECRC", label: "JECRC" },
-    { value: "MNIT", label: "MNIT" },
-  ];
-
   // Sort options
   const sortOptions = [
     { value: "recommended", label: "Recommended" },
@@ -545,6 +225,7 @@ const GuestHouses = () => {
       <p className="text-gray-600 flex items-center"><FiUser className="mr-1" /> {house.owner}</p>
       <p className="text-gray-600 flex items-center"><FiPhone className="mr-1" /> {house.number}</p>
       <p className="text-gray-600 flex items-center"><FiUsers className="mr-1" /> {house.capacity}</p>
+      <p className="text-gray-600 flex items-center"><FaSchool className="mr-1" /> {house.college}</p>
       <p className="text-sm text-blue-600">{house.distance} Km from {house.college}</p>
       
       <div className="mt-3 flex flex-wrap gap-2">
@@ -746,7 +427,7 @@ const GuestHouses = () => {
       {/* Header and Navigation */}
       
       <h1 className="text-3xl font-bold text-center mb-6">
-        Find Guest Houses Near Your College
+        Find Paying Guest Accomodation Near Your College
       </h1>
 
       {/* Hero Section */}
@@ -994,7 +675,7 @@ const GuestHouses = () => {
                     className="mr-2"
                   />
                   <label htmlFor="restaurant" className="flex items-center text-sm">
-                    <IoMdRestaurant className="mr-1" /> Restaurant
+                    <IoMdRestaurant className="mr-1" /> Mess
                   </label>
                 </div>
               </div>
