@@ -105,22 +105,22 @@ export default function Footer() {
                             <h2 className="text-sm font-bold text-gray-900 uppercase mb-4">Legal</h2>
                             <ul className="space-y-3">
                                 <li>
-                                    <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
+                                    <Link to="/policy-page" className="text-gray-600 hover:text-blue-600 transition-colors">
                                         Privacy Policy
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
+                                    <Link to="/policy-page" className="text-gray-600 hover:text-blue-600 transition-colors">
                                         Terms & Conditions
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
+                                    <Link to="/policy-page" className="text-gray-600 hover:text-blue-600 transition-colors">
                                         Cookie Policy
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
+                                    <Link to="/policy-page" className="text-gray-600 hover:text-blue-600 transition-colors">
                                         Refund Policy
                                     </Link>
                                 </li>
@@ -149,11 +149,11 @@ export default function Footer() {
 
                     {/* Social Icons */}
                     <div className="flex space-x-4">
-                        <a href="#" className="bg-gray-100 p-2 rounded-full text-gray-600 hover:bg-blue-100 hover:text-blue-600 transition-colors">
+                        <a href="https://www.facebook.com/bhupesh.jha.737" className="bg-gray-100 p-2 rounded-full text-gray-600 hover:bg-blue-100 hover:text-blue-600 transition-colors">
                             <Facebook size={18} />
                             <span className="sr-only">Facebook</span>
                         </a>
-                        <a href="#" className="bg-gray-100 p-2 rounded-full text-gray-600 hover:bg-blue-100 hover:text-blue-600 transition-colors">
+                        <a href="https://x.com/bhupesh_jh60422" className="bg-gray-100 p-2 rounded-full text-gray-600 hover:bg-blue-100 hover:text-blue-600 transition-colors">
                             <Twitter size={18} />
                             <span className="sr-only">Twitter</span>
                         </a>
@@ -165,7 +165,7 @@ export default function Footer() {
                             <Linkedin size={18} />
                             <span className="sr-only">LinkedIn</span>
                         </a>
-                        <a href="#" className="bg-gray-100 p-2 rounded-full text-gray-600 hover:bg-blue-100 hover:text-blue-600 transition-colors">
+                        <a href="https://www.instagram.com/bhupesh.jhaa/" className="bg-gray-100 p-2 rounded-full text-gray-600 hover:bg-blue-100 hover:text-blue-600 transition-colors">
                             <Instagram size={18} />
                             <span className="sr-only">Instagram</span>
                         </a>

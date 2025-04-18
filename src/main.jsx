@@ -10,6 +10,7 @@ import About from './Components/About/About.jsx'
 import Contact from './Components/Contact/Contact.jsx'
 import GuestHouses from './Components/Guest House/guest-house.jsx'
 import Upload from './Components/Upload/Upload.jsx'
+import PolicyPage from './Components/Policy Page/policyPage.jsx'
 import { Route } from 'react-router-dom'
 
 
@@ -21,6 +22,7 @@ const router = createBrowserRouter(
       <Route path='contact' element={<Contact />} />
       <Route path='guest-house' element={<GuestHouses />} />
       <Route path='upload-guest-house' element={<Upload />} />
+      <Route path='policy-page' element={<PolicyPage />} />
     </Route>
   )
 )
