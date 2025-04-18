@@ -6,7 +6,7 @@ import { TbAirConditioning, TbParking, TbToolsKitchen } from "react-icons/tb";
 import { IoMdRestaurant } from "react-icons/io";
 import { FaSchool } from "react-icons/fa";
 
-const [error, setError] = useState("");
+
 
 
 const GuestHouses = () => {
