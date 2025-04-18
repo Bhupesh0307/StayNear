@@ -72,16 +72,7 @@ export default function Footer() {
                         <div>
                             <h2 className="text-sm font-bold text-gray-900 uppercase mb-4">Resources</h2>
                             <ul className="space-y-3">
-                                <li>
-                                    <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
-                                        Blog
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
-                                        FAQs
-                                    </Link>
-                                </li>
+                                
                                 <li>
                                     <a
                                         href="https://github.com/Bhupesh0307/StayNear"
@@ -91,11 +82,6 @@ export default function Footer() {
                                     >
                                         GitHub Repository
                                     </a>
-                                </li>
-                                <li>
-                                    <Link to="/" className="text-gray-600 hover:text-blue-600 transition-colors">
-                                        Help Center
-                                    </Link>
                                 </li>
                             </ul>
                         </div>
@@ -149,10 +135,7 @@ export default function Footer() {
 
                     {/* Social Icons */}
                     <div className="flex space-x-4">
-                        <a href="https://www.facebook.com/bhupesh.jha.737" className="bg-gray-100 p-2 rounded-full text-gray-600 hover:bg-blue-100 hover:text-blue-600 transition-colors">
-                            <Facebook size={18} />
-                            <span className="sr-only">Facebook</span>
-                        </a>
+                        
                         <a href="https://x.com/bhupesh_jh60422" className="bg-gray-100 p-2 rounded-full text-gray-600 hover:bg-blue-100 hover:text-blue-600 transition-colors">
                             <Twitter size={18} />
                             <span className="sr-only">Twitter</span>
@@ -165,10 +148,7 @@ export default function Footer() {
                             <Linkedin size={18} />
                             <span className="sr-only">LinkedIn</span>
                         </a>
-                        <a href="https://www.instagram.com/bhupesh.jhaa/" className="bg-gray-100 p-2 rounded-full text-gray-600 hover:bg-blue-100 hover:text-blue-600 transition-colors">
-                            <Instagram size={18} />
-                            <span className="sr-only">Instagram</span>
-                        </a>
+                        
                     </div>
                 </div>
             </div>
