@@ -4,10 +4,6 @@ import { FiWifi, FiHome, FiDollarSign, FiMapPin, FiPhone, FiUser, FiUsers, FiHea
 import { BiDumbbell, BiCctv } from "react-icons/bi";
 import { TbAirConditioning, TbParking, TbToolsKitchen } from "react-icons/tb";
 import { IoMdRestaurant } from "react-icons/io";
-import { FaSchool } from "react-icons/fa";
-
-
-
 
 const GuestHouses = () => {
   const [selectedCollege, setSelectedCollege] = useState(null);
@@ -549,7 +545,6 @@ const GuestHouses = () => {
       <p className="text-gray-600 flex items-center"><FiUser className="mr-1" /> {house.owner}</p>
       <p className="text-gray-600 flex items-center"><FiPhone className="mr-1" /> {house.number}</p>
       <p className="text-gray-600 flex items-center"><FiUsers className="mr-1" /> {house.capacity}</p>
-      <p className="text-gray-600 flex items-center"><FaSchool className="mr-1" /> {house.college}</p>
       <p className="text-sm text-blue-600">{house.distance} Km from {house.college}</p>
       
       <div className="mt-3 flex flex-wrap gap-2">
@@ -859,7 +854,7 @@ const GuestHouses = () => {
       </button>
     </div>
   </div>
-      
+        
         {/* Advanced filter section */}
         {isFilterOpen && (
           <div className="border-t border-gray-200 pt-4 mt-4">
@@ -869,14 +864,10 @@ const GuestHouses = () => {
                 <Select
                   options={colleges}
                   value={selectedCollege}
-                  onChange={(option) => {
-                    setSelectedCollege(option);
-                    setError(""); // clear error on selection
-                  }}
+                  onChange={setSelectedCollege}
                   placeholder="Select your college"
                   className="w-full"
                 />
-                {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
               </div>
               
               <div>
@@ -1261,7 +1252,6 @@ const GuestHouses = () => {
                   <p className="text-gray-600 dark:text-gray-300 flex items-center">
                     <FiPhone className="mr-2" /> {selectedHouse.number}
                   </p>
-                  
                 </div>
                 
                 <div className="mt-6 flex gap-4">
