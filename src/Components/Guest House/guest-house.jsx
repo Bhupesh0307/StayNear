@@ -431,7 +431,7 @@ const GuestHouses = () => {
       </h1>
 
       {/* Hero Section */}
-<div className="max-w-6xl mx-auto bg-gradient-to-r from-blue-500 to-purple-600 p-8 rounded-lg shadow-lg mb-8 text-white">
+<div className="max-w-6xl mx-auto bg-gradient-to-br from-orange-600 to-indigo-700 p-8 rounded-lg shadow-lg mb-8 text-white">
   <div className="flex flex-col items-center md:items-start">
     <h2 className="text-2xl md:text-3xl font-bold mb-2">Find Your Perfect Stay</h2>
     <p className="text-blue-100 mb-6">Browse from our collection of premium guest houses near your college</p>
