@@ -434,7 +434,7 @@ const GuestHouses = () => {
 <div className="max-w-6xl mx-auto bg-gradient-to-br from-orange-600 to-indigo-700 p-8 rounded-lg shadow-lg mb-8 text-white">
   <div className="flex flex-col items-center md:items-start">
     <h2 className="text-2xl md:text-3xl font-bold mb-2">Find Your Perfect Stay</h2>
-    <p className="text-blue-100 mb-6">Browse from our collection of premium guest houses near your college</p>
+    <p className="text--100 mb-6">Browse from our collection of premium guest houses near your college</p>
     <div className="flex gap-3">
       <button 
         className="bg-white text-blue-600 px-4 py-2 rounded-md font-medium hover:bg-blue-50 transition-colors"
@@ -476,7 +476,7 @@ const GuestHouses = () => {
   <div className="flex flex-col md:flex-row items-center justify-between gap-4">
     <button
       onClick={() => setIsFilterOpen(!isFilterOpen)}
-      className="flex items-center justify-center md:w-auto w-full px-5 py-3 bg-blue-50 text-blue-600 rounded-lg hover:bg-blue-100 transition-all duration-200 font-medium shadow-sm"
+      className="flex items-center justify-center md:w-auto w-full px-5 py-3 bg-orange-50 text-blue-600 rounded-lg hover:bg-orange-100 transition-all duration-200 font-medium shadow-sm"
     >
       <FiFilter className="mr-2" />
       {isFilterOpen ? 'Hide Filters' : 'Show Filters'}
@@ -511,7 +511,7 @@ const GuestHouses = () => {
         onClick={() => setViewMode("grid")}
         className={`p-2.5 rounded-lg transition-all duration-200 ${
           viewMode === "grid" 
-            ? "bg-blue-600 text-white shadow-md" 
+            ? "bg-orange-600 text-white shadow-md" 
             : "bg-transparent text-gray-600 hover:bg-gray-200"
         }`}
         aria-label="Grid view"
@@ -524,7 +524,7 @@ const GuestHouses = () => {
         onClick={() => setViewMode("list")}
         className={`p-2.5 rounded-lg transition-all duration-200 ${
           viewMode === "list" 
-            ? "bg-blue-600 text-white shadow-md" 
+            ? "bg-orange-600 text-white shadow-md" 
             : "bg-transparent text-gray-600 hover:bg-gray-200"
         }`}
         aria-label="List view"
@@ -690,7 +690,7 @@ const GuestHouses = () => {
               </button>
               <button
                 onClick={handleSearch}
-                className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                className="px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-indigo-700"
               >
                 Apply Filters
               </button>
@@ -729,7 +729,7 @@ const GuestHouses = () => {
                       key={i + 1}
                       onClick={() => paginate(i + 1)}
                       className={`mx-1 px-3 py-1 rounded ${
-                        currentPage === i + 1 ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+                        currentPage === i + 1 ? "bg-orange-600 text-white" : "bg-gray-200 text-gray-700 hover:bg-gray-300"
                       }`}
                     >
                       {i + 1}
