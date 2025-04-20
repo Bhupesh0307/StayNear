@@ -160,11 +160,18 @@ const GuestHouses = () => {
   // Group houses by category
   const renderByCategory = () => {
     const categories = [...new Set(currentItems.map(house => house.category))];
-    
+  
+    // Sort so that "Paying Guest House" comes first
+    categories.sort((a, b) => {
+      if (a === "PG Accomodation") return -1;
+      if (b === "PG Accomodation") return 1;
+      return a.localeCompare(b); // optional alphabetical sorting for other categories
+    });
+  
     return categories.map(category => {
       const housesInCategory = currentItems.filter(house => house.category === category);
       if (housesInCategory.length === 0) return null;
-
+  
       return (
         <div key={category}>
           <h2 className="text-2xl font-semibold mb-4 mt-6">{category}</h2>
@@ -181,6 +188,7 @@ const GuestHouses = () => {
       );
     });
   };
+  
 
   const renderGridItem = (house) => (
     <div
@@ -209,7 +217,7 @@ const GuestHouses = () => {
             size={20}
           />
         </button>
-        <div className="absolute bottom-2 left-2 bg-blue-600 text-white px-2 py-1 rounded text-sm">
+        <div className="absolute bottom-2 left-2 bg-orange-500 text-white px-2 py-1 rounded text-sm">
           ₹{house.price}/night
         </div>
       </div>
@@ -272,7 +280,7 @@ const GuestHouses = () => {
               );
             })}
           </div>
-          <button className="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">
+          <button className="mt-4 w-full bg-gradient-to-br from-orange-600 to-indigo-700 hover:bg-gradient-to-br hover:from-orange-700 hover:to-indigo-800 text-white py-2 rounded">
             Book Now
           </button>
         </div>
@@ -772,7 +780,7 @@ const GuestHouses = () => {
         <div className="max-w-6xl mx-auto">
           {/* Featured Guest Houses Section */}
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold mb-4">Featured Guest Houses</h2>
+            <h2 className="text-2xl font-semibold mb-4">Featured Paying Guests</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {guestHouses.slice(0, 3).map(house => renderGridItem(house))}
             </div>

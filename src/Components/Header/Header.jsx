@@ -126,7 +126,7 @@ export default function Header() {
                             {[
                                 { to: "/", label: "Home" },
                                 { to: "/about", label: "About" },
-                                { to: "/guest-house", label: "Guest House" },
+                                { to: "/guest-house", label: "Housing" },
                                 { to: "/upload-guest-house", label: "Upload" },
                                 { to: "/contact", label: "Contact Us" }
                             ].map((item) => (

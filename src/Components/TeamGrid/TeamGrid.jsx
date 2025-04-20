@@ -1,5 +1,5 @@
 import React from 'react';
-import naman_img from "../../assets/naman_img.jpg";
+import naman_img2 from "../../assets/naman_img2.jpg";
 import Bhupesh_img from "../../assets/Bhupesh_img.jpg";
 
 const teamMembers = [
@@ -13,7 +13,7 @@ const teamMembers = [
     name: 'Naman Aggarwal',
     position: 'Web Developer', // e.g., "Co-Founder & Designer"
     initials: 'NA',
-    image: naman_img
+    image: naman_img2
   },
 ];
 
