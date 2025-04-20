@@ -458,23 +458,7 @@ const GuestHouses = () => {
       >
         View Featured
       </button>
-      <button 
-        className="bg-transparent border border-white text-white px-4 py-2 rounded-md font-medium hover:bg-white hover:bg-opacity-10 transition-colors"
-        onClick={() => {
-          // Show special offers (for example, properties with discounts)
-          const specialOffers = guestHouses
-            .filter(house => ['LNMIIT', 'JECRC', 'MNIT'].includes(house.college))
-            .slice(0, 6);
-          setFilteredHouses(specialOffers);
-          // Scroll to results
-          window.scrollTo({
-            top: document.querySelector('.max-w-6xl').offsetTop + 400,
-            behavior: 'smooth'
-          });
-        }}
-      >
-        Special Offers
-      </button>
+      
     </div>
   </div>
 </div>
