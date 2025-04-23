@@ -16,10 +16,9 @@ export default function About() {
                                     Our Mission at <span className="text-orange-600">{websiteName}</span>
                                 </h1>
                                 <p className="mt-6 text-lg text-gray-600 leading-relaxed">
-                                    We're transforming how college students find accommodation by creating a seamless, 
-                                    trustworthy platform that connects students with quality housing options near their institutions.
+                                We're transforming the way college students find accommodation by creating a seamless and trustworthy platform that connects them with quality housing options near their institutions.
                                 </p>
-                                <div className="mt-8 flex flex-wrap gap-4">
+                                <div className="mt-8 flex space-x-4">
                                     <Link 
                                         to="/guest-house"
                                         className="px-6 py-3 bg-gradient-to-r from-orange-600 to-orange-700 text-white font-medium rounded-lg hover:from-orange-700 hover:to-orange-800 transition duration-300 shadow-md"
@@ -74,14 +73,12 @@ export default function About() {
                         <div className="w-full md:w-1/2">
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">The Challenge</h3>
                             <p className="text-gray-600 mb-6">
-                                Students moving to new cities for education often face significant challenges in finding suitable accommodation 
-                                near their institutions. The existing options are fragmented, involve multiple intermediaries, and lack a 
-                                streamlined booking process.
+                               Students relocating to new cities for education often face significant challenges in finding suitable accommodation near their institutions. The available options are fragmented, involve multiple intermediaries, and lack a streamlined booking process.
+
+                                The search for housing can be stressful and time-consuming, detracting from the excitement of starting a new educational journey. As a result, many students settle for accommodations that are far from ideal due to limited information and choices.
                             </p>
                             <p className="text-gray-600">
-                                Housing searches can be stressful and time-consuming, taking away from the excitement of starting a new 
-                                educational journey. Many students end up settling for accommodations that are far from ideal due to 
-                                limited information and options.
+                            The search for housing can be stressful and time-consuming, diminishing the excitement of starting a new educational journey. Many students end up settling for accommodations that are far from ideal due to limited information and available options.
                             </p>
                         </div>
                     </div>
@@ -90,13 +87,10 @@ export default function About() {
                         <div className="w-full md:w-1/2">
                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Solution</h3>
                             <p className="text-gray-600 mb-6">
-                                {websiteName} was born to address this gap by providing a centralized, user-friendly platform that connects 
-                                students with verified accommodation options near their educational institutions. We eliminate the need for 
-                                intermediaries and streamline the booking process.
+                            {websiteName} was created to address this gap by providing a centralized, user-friendly platform that connects students with verified accommodation options near their educational institutions. We eliminate the need for intermediaries and streamline the booking process.
                             </p>
                             <p className="text-gray-600">
-                                Our platform offers comprehensive information, transparent pricing, and a seamless booking experience. 
-                                We personally verify each property to ensure quality and safety, giving students and parents peace of mind.
+                            Our platform provides comprehensive information, transparent pricing, and a seamless booking experience. We personally verify each property to ensure quality and safety, giving both students and parents peace of mind.
                             </p>
                         </div>
 
@@ -131,7 +125,7 @@ export default function About() {
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">Trust & Safety</h3>
                             <p className="text-gray-600">
-                                We verify every property listed on our platform to ensure students have access to safe, quality accommodation options.
+                            We verify every property listed on our platform to ensure that students have access to safe and high-quality accommodation options.
                             </p>
                         </div>
 
@@ -183,22 +177,22 @@ export default function About() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl font-bold text-white mb-6">Join the {websiteName} Community</h2>
                     <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                        Whether you're a student looking for accommodation or a property owner with spaces to rent, 
-                        we're here to make the process simple and stress-free.
+                    Whether you're a student searching for accommodation or a property owner with spaces to rent, we're here to make the process simple and stress-free.
                     </p>
-                    <Link 
-                        to="/guest-house"
-                        className="px-8 py-3 bg-white text-orange-600 font-medium rounded-lg hover:bg-gray-100 transition duration-300 shadow-md"
-                    >
-                    Find Housing
-                    </Link>
-                    <Link 
-                        to="/upload-guest-house"
-                        className="px-8 py-3 bg-transparent border-2 border-white text-white font-medium rounded-lg hover:bg-white/10 transition duration-300"
-                    >
-                    List Your Property
-                    </Link>
-                                
+                    <div className="flex flex-col sm:flex-row justify-center gap-4">
+                        <Link 
+                            to="/guest-house"
+                            className="px-8 py-3 bg-white text-orange-600 font-medium rounded-lg hover:bg-gray-100 transition duration-300 shadow-md"
+                        >
+                        Find Housing
+                        </Link>
+                        <Link 
+                            to="/upload-guest-house"
+                            className="px-8 py-3 bg-transparent border-2 border-white text-white font-medium rounded-lg hover:bg-white/10 transition duration-300"
+                        >
+                        List Your Property
+                        </Link>
+                    </div>       
                 </div>
             </section>
         </div>

@@ -5,13 +5,13 @@ import Bhupesh_img from "../../assets/Bhupesh_img.jpg";
 const teamMembers = [
   {
     name: 'Bhupesh Jha',
-    position: 'Web Developer', // e.g., "Co-Founder & Developer"
+    position: 'Web Developer', 
     initials: 'BJ',
     image: Bhupesh_img
   },
   {
     name: 'Naman Aggarwal',
-    position: 'Web Developer', // e.g., "Co-Founder & Designer"
+    position: 'Web Developer', 
     initials: 'NA',
     image: naman_img2
   },

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Select from "react-select";
-import { FiWifi, FiHome, FiDollarSign, FiMapPin, FiPhone, FiUser, FiUsers, FiHeart, FiFilter, FiCheck, FiSearch, FiStar, FiAirplay, FiMail, FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
+import { FiWifi, FiHome, FiMapPin, FiPhone, FiUser, FiUsers, FiHeart, FiFilter, FiCheck, FiSearch, FiStar, FiAirplay, FiMail, FiFacebook, FiTwitter, FiInstagram } from "react-icons/fi";
 import { BiDumbbell, BiCctv } from "react-icons/bi";
 import { TbAirConditioning, TbParking, TbToolsKitchen } from "react-icons/tb";
 import { IoMdRestaurant } from "react-icons/io";
@@ -315,7 +315,7 @@ const GuestHouses = () => {
             size={20}
           />
         </button>
-        <div className="absolute bottom-2 left-2 bg-blue-600 text-white px-2 py-1 rounded text-sm">
+        <div className="absolute bottom-2 left-2 bg-orange-500 text-white px-2 py-1 rounded text-sm">
           ₹{house.price}/night
         </div>
       </div>
@@ -337,7 +337,7 @@ const GuestHouses = () => {
           <p className="text-gray-600 flex items-center"><FiUsers className="mr-1" /> {house.capacity}</p>
         </div>
         
-        <p className="text-sm text-blue-600 mt-2">{house.distance}</p>
+        <p className="text-sm text-blue-600 mt-2">{house.distance} Km from {house.college}</p>
         <p className="text-gray-700 mt-2">{house.details}</p>
         
         <div className="mt-3 flex flex-wrap gap-2">
@@ -364,7 +364,7 @@ const GuestHouses = () => {
         </div>
         
         <div className="mt-4 flex justify-end">
-          <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded">
+          <button className="mt-4 w-full bg-gradient-to-br from-orange-600 to-indigo-700 hover:bg-gradient-to-br hover:from-orange-700 hover:to-indigo-800 text-white py-2 rounded">
             Book Now
           </button>
         </div>
