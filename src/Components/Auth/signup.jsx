@@ -15,23 +15,23 @@ const Signup = () => {
 	setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-	e.preventDefault();
-	try {
-	  const res = await fetch('/api/signup', {
-		method: 'POST',
-		headers: { 'Content-Type': 'application/json' },
-		body: JSON.stringify(form)
-	  });
-	  const data = await res.json();
-	  if (!res.ok) throw new Error(data.message || 'Signup failed');
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const res = await fetch('http://localhost:5000/api/auth/register', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
 
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.message || 'Signup failed');
 
-alert('Signup successful! Please log in.');
-navigate('/login');
-} catch (err) {
-setError(err.message);
-}
+    alert('Signup successful! Please log in.');
+    navigate('/login');
+  } catch (err) {
+    setError(err.message);
+  }
 };
 
 
@@ -81,5 +81,21 @@ Login
 );
 };
 
+const API_BASE_URL = "http://localhost:5173/api";
+
+const handleSignup = async (e) => {
+  e.preventDefault();
+  try {
+    const res = await fetch(`${API_BASE_URL}/auth/register`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, email, password }),
+    });
+    const data = await res.json();
+    console.log("Signup:", data);
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 export default Signup;

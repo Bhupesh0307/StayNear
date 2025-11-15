@@ -1,66 +1,72 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import StayNearLogo from "../../assets/Yellow and Black Modern Media Logo.png";
-import { AuthContext } from "../../context/AuthContext"; // ✅ Import your AuthContext
+import { AuthContext } from "../../context/AuthContext";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const { user, logout } = useContext(AuthContext); // ✅ Get user info and logout
+  const { user, logout } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleLogout = () => {
     logout();
+    setMenuOpen(false);
     navigate("/login");
   };
 
+  const navLinks = [
+    { to: "/", label: "Home" },
+    { to: "/about", label: "About" },
+    { to: "/guest-house", label: "Housing" },
+    { to: "/upload-guest-house", label: "Upload" },
+    { to: "/contact", label: "Contact Us" },
+  ];
+
   return (
-    <header className="shadow sticky z-50 top-0 bg-white dark: w-full transition-colors duration-300">
-      <nav className="border-gray-200 dark:border-gray-700 px-4 lg:px-6 py-3 w-full">
-        <div className="flex justify-between items-center w-full">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
+    <header className="shadow sticky top-0 z-50 bg-white w-full transition-all duration-300">
+      <nav className="border-b border-gray-200 px-4 lg:px-6 py-3">
+        <div className="flex justify-between items-center">
+          {/* ✅ Logo */}
+          <Link to="/" className="flex items-center gap-2">
             <img
               src={StayNearLogo}
-              className="mr-3 h-10 w-auto rounded-lg"
+              className="h-10 w-auto rounded-lg"
               alt="StayNear Logo"
             />
+            <span className="text-lg font-semibold text-gray-800">
+              StayNear
+            </span>
           </Link>
 
-          {/* Mobile Menu Button */}
-          <div className="flex items-center">
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="lg:hidden text-black focus:outline-none"
-            >
-              {menuOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
-          </div>
+          {/* ✅ Mobile Menu Toggle */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="lg:hidden text-gray-800 focus:outline-none"
+          >
+            {menuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
 
-          {/* Navigation Links */}
+          {/* ✅ Navigation Links */}
           <div
             className={`${
-              menuOpen ? "block" : "hidden"
-            } absolute top-16 left-0 w-full bg-white lg:bg-transparent lg:static lg:block lg:w-auto transition-all`}
+              menuOpen
+                ? "block absolute top-16 left-0 w-full bg-white border-t border-gray-200"
+                : "hidden"
+            } lg:flex lg:items-center lg:static lg:w-auto`}
           >
-            <ul className="flex flex-col lg:flex-row lg:space-x-8 text-center lg:text-left items-center">
-              {[
-                { to: "/", label: "Home" },
-                { to: "/about", label: "About" },
-                { to: "/guest-house", label: "Housing" },
-                { to: "/upload-guest-house", label: "Upload" },
-                { to: "/contact", label: "Contact Us" },
-              ].map((item) => (
+            <ul className="flex flex-col lg:flex-row lg:space-x-8 items-center text-center lg:text-left">
+              {navLinks.map((item) => (
                 <li key={item.to} className="w-full lg:w-auto">
                   <NavLink
                     to={item.to}
                     onClick={() => setMenuOpen(false)}
                     className={({ isActive }) =>
-                      `block py-3 px-4 duration-200 ${
+                      `block py-3 px-4 transition-all ${
                         isActive
-                          ? "text-orange-700 font-semibold"
-                          : "text-black"
-                      } border-b lg:border-0 hover:bg-gray-100 lg:hover:bg-transparent`
+                          ? "text-orange-600 font-semibold"
+                          : "text-gray-700 hover:text-orange-600"
+                      }`
                     }
                   >
                     {item.label}
@@ -68,10 +74,10 @@ export default function Header() {
                 </li>
               ))}
 
-              {/* ✅ Auth Buttons */}
+              {/* ✅ Auth Buttons / User Info */}
               <li className="mt-2 lg:mt-0">
                 {!user ? (
-                  <div className="flex space-x-4">
+                  <div className="flex flex-col lg:flex-row gap-2">
                     <Link
                       to="/login"
                       onClick={() => setMenuOpen(false)}
@@ -88,8 +94,8 @@ export default function Header() {
                     </Link>
                   </div>
                 ) : (
-                  <div className="flex items-center space-x-4">
-                    <span className="text-black font-medium">
+                  <div className="flex flex-col lg:flex-row items-center gap-3">
+                    <span className="text-gray-800 font-medium">
                       Hi, {user.name || user.email}
                     </span>
                     <button
